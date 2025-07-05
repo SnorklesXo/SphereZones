@@ -87,8 +87,8 @@ $('#exportButton').click(function () {
                     var pointsArray = pointsString.split(/\s+/);
 
                     pointsArray.forEach(point => {
-                        var mappedX = ((parseFloat(point.split(',')[0]) / 8192) * 2000 - 1000) * 463 + 157664;
-                        var mappedY = ((parseFloat(point.split(',')[1]) / 8192) * -2000 + 1000) * 463 - 123467;
+            var mappedX = ((parseFloat(point.split(',')[0]) / 8192) * 2000 - 1000) * 741 + -18100;
+            var mappedY = ((parseFloat(point.split(',')[1]) / 8192) * -2000 + 1000) * 741 - 277000;
                         input["points"].push({ x: mappedX, y: mappedY });
                     });
                 }
@@ -166,8 +166,8 @@ $('#importButton').click(function () {
                     let points = []
 
                     zones.points.forEach(data => {
-                        let originalX = ((data.x - 157664) / 463 + 1000) * (8192 / 2000);
-                        let originalY = -((data.y + 123467) / 463 - 1000) * (8192 / 2000);
+                        let originalX = ((data.x - -18100) / 741 + 1000) * (8192 / 2000);
+                        let originalY = -((data.y + 277000) / 741 - 1000) * (8192 / 2000);
                         points.push(`${originalX},${originalY}`);
                     })
 
